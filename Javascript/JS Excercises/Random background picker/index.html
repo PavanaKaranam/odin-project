@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randon Background Picker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="Nav-bar">
+    <div class="Name">Random Color Picker</div>
+   </div> 
+
+   <div class="content">
+<!--     <p class="backgroundColor"></p>
+    <input type="submit" value="Click me to change" class="inputButton"> -->
+     <button class="clickBtn">Click me</button>
+     <p class="clickCount">Count number: </p>
+   </div>
+
+   <script>
+    function capitalize() {
+        let text = "enter your text";
+        return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();   
+    }
+    console.log(capitalize());
+
+
+
+
+
+
+    function lastLetter() {
+        let text = "Pavana K";
+        return text[text.length-1];
+    }
+    console.log(lastLetter());
+
+
+
+
+
+
+    let numbers = [2,3,4];
+    let result = 1;
+
+    for (let i = 0; i < numbers.length; i++) {
+        result *= numbers[i];
+    }
+    console.log("product is: "+ result);
+
+
+
+    
+   
+
+    const secret = Math.floor(Math.random() * 10) +1;
+    let guess = "";
+    if (guess === secret) {
+         console.log("Wow, you are crazy good!");
+    
+    }
+    else {
+       console.log ("Nope, the number was " + secret);
+    }  
+    
+    
+
+
+
+
+    let word = "Elephant"; 
+    function countVowels(str){
+       let vowels = "aeiouAEIOU"; 
+       let count = 0
+       for (let i = 0; i < str.length; i++) {
+        if(vowels.includes(str[i])) {
+            count++;
+        }
+       }
+       return count;
+     }
+     console.log(countVowels(word));
+
+
+
+
+
+
+     let text = "Pavana Loves";
+     function reverseStr(str) {
+        return str.split("").reverse().join("");
+     }
+
+     console.log(reverseStr(text));
+
+
+
+
+
+
+     let ans = parseInt(("Please enter the Number you would like to FizzBuzz up to: "));
+     let i = 1;
+     for ( i = 1; i <= ans; i++) {
+        if (i % 3 ===0 && i % 5===0) {
+            console.log("FizzBuzz");
+        }
+        else if (i % 3===0) {
+            console.log("Fizz");
+        }
+        else if (i % 5===0) {
+            console.log("Buzz"); 
+        }
+        else {
+            console.log(i);
+        }
+    } 
+
+
+
+
+
+
+   /*  let senTance = "hi how Are yOU?";
+    function titleCase(sentance) {
+        return sentance.split(" ").map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(" ");
+            
+    } 
+    console.log(titleCase(senTance)); */
+
+  
+
+
+
+
+
+
+    function countClick(){
+      const btn = document.querySelector(".clickBtn");
+      const text = document.querySelector(".clickCount");
+
+      let count= 0;
+      btn.addEventListener("click", () => {
+        count++;
+      text.textContent =`Count number: ${count}`; 
+        
+      });
+    }
+    countClick();
+
+
+    function randomPassword() {
+        let chars = "abscefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let pass= "";
+        for(let i=0; i<6; i++) {
+        pass +=  chars[Math.floor(Math.random() * chars.length)]; 
+        }
+        return pass;
+
+    }
+
+    console.log(randomPassword());
+
+
+
+
+
+    /* let senTance = "hello world";
+    function reverseSent(sentance) {
+       return sentance.split(" ").map(word =>
+           word.split("").reverse().join(""))
+        .join(" ");   
+    }
+
+    console.log(reverseSent(senTance));
+ */
+
+
+
+
+
+    function countWords (sentance){
+        let words= sentance.trim().split(/\s+/);
+        return words.length;
+    }
+
+    console.log(countWords("dude"));
+
+
+
+
+
+    let Input = "1234";
+    function sumOfAll(str) {
+       
+        let sum = 0;
+        for(let i=0; i<str.length; i++){
+             sum += parseInt(str[i]);
+        }
+        return sum;
+                
+    }
+    console.log(sumOfAll(Input));
+
+    
+
+
+
+
+
+    let sentance = "my head is hurting.";
+    function longestWord(sentance){
+        let longest= ""; // set to an empty string.
+        let words= sentance.split(/\s+/); //splitting the sentance into words
+        for (let i=0; i<words.length; i++) {
+            if (words[i].length> longest.length) {
+                longest = words[i]; //gotta update longest
+            }
+        }
+        return `longest word is: ${longest}`;
+    }
+    console.log(longestWord(sentance));
+
+
+    
+    function capitalizeEveryWord(sentence){
+        return sentence.split(" ").map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(" ");
+    }
+
+    console.log(capitalizeEveryWord("my head is hurting less"));
+
+
+
+
+
+
+    function countChar() {
+        
+    }
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+    
+   </script>
+</body>
+</html>

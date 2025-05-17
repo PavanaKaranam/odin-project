@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+        /* let ans= parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+        for (let i = 1; i <= ans; i++){
+            if (i % 3 ===0 && i % 5===0) {
+                console.log("FizzBuzz");
+            } 
+
+            else if (i % 5 ===0) {
+                console.log("Buzz");
+            }
+
+            else if (i % 3 ===0) {
+                console.log("Fizz");
+            }
+            else {
+                console.log(i);
+            }
+        }
+            
+
+        function highestOfThree (a,b,c){
+            if (a>b,c) {
+                console.log(a);
+            }
+            else if (b> a,c) {
+            console.log(b);
+            }
+            else console.log(c);
+        } 
+        
+        highestOfThree(8,2,6);
+*/
+        let input = (prompt("enter 10 numbers, man"));
+        let ofTen = input.split(",").map(Number);
+
+        function findThirdHighest(numbers){
+            if (numbers.length <3) {
+                return ("needs at least three numbers!");
+            }
+            const temNum = [... new Set(numbers)];
+            temNum.sort((a,b) => b-a);
+            return temNum[2];
+        }
+        alert (`the third highest number is ${findThirdHighest(ofTen)}`);
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

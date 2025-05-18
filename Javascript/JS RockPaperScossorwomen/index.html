@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>rock paper scissors</title>
+</head>
+<body>
+    <div class="pictures">
+    <input type="image" src="/pictures/Untitled_Artwork 41.png" alt="rock" height="250px" class="rock">
+    <input type="image" src="/pictures/Untitled_Artwork 40.png" alt="rock" height="250px" class="paper">
+    <input type="image" src="/pictures/Untitled_Artwork 42.png" alt="rock" height="250px" class="scissors">
+    </div>
+    <script>
+        function getComputerChoice(){
+            let choice = "rock, paper, scissors"; 
+            let option= choice.split(",") //split the string with commas 
+            .map(option => option.trim()); //convert to an array
+            let finalOption = option[Math.floor(Math.random()* option.length)];
+            return finalOption;
+            
+        }
+        console.log(getComputerChoice());
+  
+        function humanChoice() {
+
+
+            const rock = document.querySelector(".rock");
+            const paper = document.querySelector(".paper");
+            const scissors = document.querySelector(".scissors");
+
+            rock.addEventListener("click", () => playRound("rock"));
+            paper.addEventListener("click", () => playRound("paper"));
+            scissors.addEventListener("click", () => playRound("scissors"));
+
+            function playRound(human) {
+            let computer = getComputerChoice();
+            
+            
+            
+
+            if (human === computer) {
+                alert(`computer choice: ${computer}. ` + "It is a tie!");
+            }
+
+            else if (
+            (human === "rock" && computer === "scissors") ||
+            (human === "paper" && computer === "rock") ||
+            (human === "scissors" && computer === "paper")
+            )
+            alert(`computer choice: ${computer}. ` + "damn it you won this one");
+
+            else if (
+            (human === "rock" && computer === "paper") ||
+            (human === "paper" && computer === "scissors") ||
+            (human === "scissors" && computer === "rock")
+            )
+            alert(`computer choice: ${computer}. ` + "HAHA take that");
+        }
+        }
+        
+        
+        humanChoice();
+    </script>
+</body>
+</html>

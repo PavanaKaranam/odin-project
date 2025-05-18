@@ -1,0 +1,28 @@
+.pictures{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 870px;
+    flex-wrap: wrap;
+    padding: 0;
+    background-color: #fff9ed;
+}
+
+input {
+    margin: 10px;
+}
+
+:hover.rock{
+    height: 270px;
+}
+
+:hover.paper{
+    height: 270px;
+}
+
+:hover.scissors{
+    height: 270px;
+}
+
+#ale
